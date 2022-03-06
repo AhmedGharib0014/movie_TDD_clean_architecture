@@ -32,7 +32,7 @@ void main() {
       when(mockClient.get(
               Uri.parse('https://api.themoviedb.org/3/movie/popular'),
               headers: {'language': 'en-US', 'api_key': API_KEY}))
-          .thenAnswer((_) async => http.Response("", 200));
+          .thenAnswer((_) async => http.Response(response, 200));
       var result = await movieRemoteDataSourceImple.getMovies(NoParams());
       verify(mockClient.get(
           Uri.parse('https://api.themoviedb.org/3/movie/popular'),
@@ -55,7 +55,8 @@ void main() {
               headers: {'language': 'en-US', 'api_key': API_KEY}))
           .thenThrow(ServerException());
       final call = movieRemoteDataSourceImple.getMovies;
-      expect(() => call(NoParams()), throwsA(TypeMatcher<ServerException>()));
+      expect(() => call(NoParams()),
+          throwsA(const TypeMatcher<ServerException>()));
     });
   });
 }

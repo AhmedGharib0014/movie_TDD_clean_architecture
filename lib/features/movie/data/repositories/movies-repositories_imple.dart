@@ -3,7 +3,7 @@ import 'package:movie_app/core/errors/chache_exception.dart';
 import 'package:movie_app/core/errors/server_exception.dart';
 import 'package:movie_app/core/network/networkInfo.dart';
 import 'package:movie_app/core/resources/strings.dart';
-import 'package:movie_app/features/movie/data/data_sources/movie_local_dtat_source.dart';
+import 'package:movie_app/features/movie/data/data_sources/movie_local_data_source.dart';
 import 'package:movie_app/features/movie/data/data_sources/movie_remote_data_source.dart';
 import 'package:movie_app/features/movie/domain/entities/movie.dart';
 import 'package:movie_app/core/use_cases/use_cases_params_contact.dart';

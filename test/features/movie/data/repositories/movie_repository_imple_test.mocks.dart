@@ -7,7 +7,7 @@ import 'dart:async' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:movie_app/core/network/networkInfo.dart' as _i7;
 import 'package:movie_app/core/use_cases/use_cases_params_contact.dart' as _i5;
-import 'package:movie_app/features/movie/data/data_sources/movie_local_dtat_source.dart'
+import 'package:movie_app/features/movie/data/data_sources/movie_local_data_source.dart'
     as _i6;
 import 'package:movie_app/features/movie/data/data_sources/movie_remote_data_source.dart'
     as _i2;
