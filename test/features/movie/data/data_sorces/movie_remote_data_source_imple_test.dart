@@ -4,7 +4,7 @@ import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:movie_app/core/errors/server_exception.dart';
 import 'package:movie_app/core/resources/env_variables.dart';
-import 'package:movie_app/core/use_cases/use_cases_params_contact.dart';
+import 'package:movie_app/core/use_cases/use_cases_params_use_case_contract.dart';
 import 'package:movie_app/features/movie/data/data_sources/movie_remote_date_source_imple.dart';
 import 'package:movie_app/features/movie/data/models/movie_model.dart';
 
@@ -30,20 +30,27 @@ void main() {
 
     test("test calling api eith right header", () async {
       when(mockClient.get(
-              Uri.parse('https://api.themoviedb.org/3/movie/popular'),
-              headers: {'language': 'en-US', 'api_key': API_KEY}))
-          .thenAnswer((_) async => http.Response(response, 200));
+          Uri.parse(
+              'https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}'),
+          headers: {
+            'language': 'en-US',
+          })).thenAnswer((_) async => http.Response(response, 200));
       var result = await movieRemoteDataSourceImple.getMovies(NoParams());
       verify(mockClient.get(
-          Uri.parse('https://api.themoviedb.org/3/movie/popular'),
-          headers: {'language': 'en-US', 'api_key': API_KEY}));
+          Uri.parse(
+              'https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}'),
+          headers: {
+            'language': 'en-US',
+          }));
     });
 
     test("should return list of movies when calling api succeded", () async {
       when(mockClient.get(
-              Uri.parse('https://api.themoviedb.org/3/movie/popular'),
-              headers: {'language': 'en-US', 'api_key': API_KEY}))
-          .thenAnswer((_) async => http.Response(response, 200));
+          Uri.parse(
+              'https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}'),
+          headers: {
+            'language': 'en-US',
+          })).thenAnswer((_) async => http.Response(response, 200));
       var result = await movieRemoteDataSourceImple.getMovies(NoParams());
 
       expect(result, movies);

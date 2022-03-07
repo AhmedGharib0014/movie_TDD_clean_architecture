@@ -7,7 +7,7 @@ import 'dart:async' as _i5;
 import 'package:dartz/dartz.dart' as _i3;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:movie_app/core/errors/error_contact.dart' as _i6;
-import 'package:movie_app/core/use_cases/use_cases_params_contact.dart' as _i8;
+import 'package:movie_app/core/use_cases/use_cases_params_use_case_contract.dart' as _i8;
 import 'package:movie_app/features/movie/domain/entities/movie.dart' as _i7;
 import 'package:movie_app/features/movie/domain/repository/movies_repository.dart'
     as _i2;

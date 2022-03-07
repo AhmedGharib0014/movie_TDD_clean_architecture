@@ -4,7 +4,7 @@ import 'package:bloc/bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
 import 'package:movie_app/core/errors/error_contact.dart';
-import 'package:movie_app/core/use_cases/use_cases_params_contact.dart';
+import 'package:movie_app/core/use_cases/use_cases_params_use_case_contract.dart';
 import 'package:movie_app/features/movie/domain/entities/movie.dart';
 import 'package:movie_app/features/movie/domain/usecases/get_movies_use_case.dart';
 

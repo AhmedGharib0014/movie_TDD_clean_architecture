@@ -5,7 +5,7 @@ import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:movie_app/core/errors/error_contact.dart';
 import 'package:movie_app/core/resources/strings.dart';
-import 'package:movie_app/core/use_cases/use_cases_params_contact.dart';
+import 'package:movie_app/core/use_cases/use_cases_params_use_case_contract.dart';
 import 'package:movie_app/features/movie/domain/entities/movie.dart';
 import 'package:movie_app/features/movie/domain/usecases/get_movies_use_case.dart';
 import 'package:movie_app/features/movie/presentation/movies_list_vloc/movies_list_bloc.dart';

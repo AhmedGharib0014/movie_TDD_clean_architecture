@@ -4,7 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 import 'package:movie_app/core/errors/chache_exception.dart';
-import 'package:movie_app/core/use_cases/use_cases_params_contact.dart';
+import 'package:movie_app/core/use_cases/use_cases_params_use_case_contract.dart';
 import 'package:movie_app/features/movie/data/data_sources/movie_local_data_source_imple.dart';
 import 'package:movie_app/features/movie/data/models/movie_model.dart';
 import 'package:shared_preferences/shared_preferences.dart';

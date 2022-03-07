@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'package:movie_app/core/use_cases/use_cases_params_contact.dart';
+import 'package:movie_app/core/use_cases/use_cases_params_use_case_contract.dart';
 import 'package:movie_app/features/movie/domain/entities/movie.dart';
 import 'package:movie_app/features/movie/domain/repository/movies_repository.dart';
 import 'package:movie_app/features/movie/domain/usecases/get_movies_use_case.dart';
