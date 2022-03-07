@@ -17,9 +17,17 @@ class MovieRemoteDataSourceImple extends MovieRemoteDataSource {
   Future<List<MovieModel>?> getMovies(Params? params) async {
     try {
       var response = await client.get(
-          Uri.parse('https://api.themoviedb.org/3/movie/popular'),
-          headers: {'language': 'en-US', 'api_key': API_KEY});
-      return MoviesResponseModel.fromJson(jsonDecode(response.body)).results;
+          Uri.parse(
+              'https://api.themoviedb.org/3/movie/popular?api_key=63390d02684efd200de80a9000b0d30e'),
+          headers: {
+            'language': 'en-US',
+          });
+      print(response.body);
+      if (response.statusCode == 200) {
+        return MoviesResponseModel.fromJson(jsonDecode(response.body)).results;
+      } else {
+        throw ServerException();
+      }
     } catch (e) {
       throw ServerException();
     }
